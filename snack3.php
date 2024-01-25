@@ -1,3 +1,54 @@
+<?php
+
+    $dates = [
+        '12/04/2021' => [
+            [
+                'title' => 'Post 1',
+                'author' => 'Marco Benfi',
+                'text' => 'Bella a tutti'
+            ],
+            [
+                'title' => 'Post 2',
+                'author' => 'Marco Benfi',
+                'text' => 'Bella a tutti'
+            ],
+        ],
+        '22/06/2021' => [
+            [
+                'title' => 'Post 3',
+                'author' => 'Marco Benfi',
+                'text' => 'Bella a tutti'
+            ]
+        ],
+        '15/07/2021' => [
+            [
+                'title' => 'Post 4',
+                'author' => 'Marco Benfi',
+                'text' => 'Bella a tutti'
+            ],
+            [
+                'title' => 'Post 5',
+                'author' => 'Marco Benfi',
+                'text' => 'Bella a tutti'
+            ],
+            [
+                'title' => 'Post 6',
+                'author' => 'Marco Benfi',
+                'text' => 'Bella a tutti'
+            ]
+        ],
+    ];
+
+    foreach($dates as $key => $date){
+        echo $key."<br>";;
+        foreach($date as $post){
+            echo $post['title']."<br>";
+            echo $post['author']."<br>";;
+            echo $post['text']."<br>";;
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
