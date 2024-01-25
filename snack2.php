@@ -1,3 +1,17 @@
+<?php
+if(isset($_GET['nome']) && isset($_GET['mail']) && isset($_GET['eta'])){
+    $name = $_GET['nome'];
+    $email = $_GET['mail'];
+    $eta = $_GET['eta'];
+
+    if(strlen($name) > 3 && str_contains($email, '@') && str_contains($email, '.') && is_numeric($eta)){
+        echo "Accesso riuscito";
+    }
+    else{
+        echo "Accesso negato";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +22,11 @@
     <title>Snack2</title>
 </head>
 <body>
-    
+    <form action="snack2.php" method="GET">
+        <input type="text" name="nome" id="nome">
+        <input type="text" name="mail" id="mail">
+        <input type="text" name="eta" id="eta">
+        <button type="submit">send</button>
+    </form>
 </body>
 </html>
